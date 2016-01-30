@@ -49,13 +49,14 @@ class Book < ActiveRecord::Base
         query: {
           multi_match: {
             query: query,
-            fields: ['title^10', 'tags^10', 'description', 'author.name^15'],
-            fuzziness: 2
+            fields: ['title^10', 'tags_array^15', 'description', 'author.name^15'],
+            fuzziness: 1
           }
         },
         highlight: {
           pre_tags: ['<em>'],
           post_tags: ['</em>'],
+          fragment_size: 500,
           fields: {
             title: {},
             description: {}

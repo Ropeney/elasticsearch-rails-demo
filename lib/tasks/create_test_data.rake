@@ -20,10 +20,10 @@ namespace :create_test_data do
     Book.create!( title: 'Secrets and Lies',
                   author: Author.create!(name: 'Bruce Schneier'),
                   tags: 'Computers, Networking & communications, Computer Security',
-                  description: 'Bestselling author Br Schneier offers his expert '\
+                  description: 'Bestselling author Bruce Schneier offers his expert '\
                                'guidance on achieving security on a network '\
                                'Internationally recognized computer security expert '\
-                               'ce Schneier offers a practical, straightforward '\
+                               'Bruce Schneier offers a practical, straightforward '\
                                'guide to achieving security throughout computer '\
                                'networks. Schneier uses his extensive field experience '\
                                'with his own clients to dispel the myths that often '\

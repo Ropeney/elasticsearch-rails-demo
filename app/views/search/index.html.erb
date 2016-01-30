@@ -1,0 +1,20 @@
+<div class="search-form">
+  <h1>ElasticSearch Demo</h1>
+  <%= form_tag root_path, method: 'get', class: 'search-box' do %>
+    <%= text_field_tag :q, nil, placeholder: 'Type something to search&hellip;'.html_safe %>
+    <%= submit_tag 'Search' %>
+  <% end %>
+  <% unless @books.blank? %>
+    <% @books.each do |book| %>
+      <h2 class="title"><%= book.title %></h2>
+      <div class="author"><%= book.author.name %></div>
+        <div class="description">
+          <% if book.try(:highlight) && book.highlight.description.present? %>
+            <%= book.highlight.description.join.html_safe %>
+          <% else %>
+            <%= book.description %>
+          <% end %>
+        </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resource :search
+  root 'search#index'
+  resource :search, only: :index
 end

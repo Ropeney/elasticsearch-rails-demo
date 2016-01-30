@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+.search-form {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20vh;
+
+  h1 {
+    width: 100%;
+    margin: 0 auto 20px;
+    font-size: 3em;
+  }
+  .search-box {
+    width: 60%;
+    margin: 0 auto;
+
+    input[type=text] {
+      width: 70%;
+      padding: 5px 3px;
+    }
+    input[type=submit] {
+      color: #900;
+      border: 1px solid #900;
+      height: 2em;
+      font-weight: bold;
+    }
+  }
+  .title {
+    margin-bottom: 2px;
+  }
+  .author {
+    font-style: italic;
+  }
+  .description {
+    font-family: monospace;
+    em {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}
